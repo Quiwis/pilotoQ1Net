@@ -6,7 +6,7 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>0fff4e0d-ac4b-4909-bd7d-03248220bf34</ProjectGuid>
+    <ProjectGuid>3a50ef08-0999-42cb-b688-71f1673efcac</ProjectGuid>
     <RootNamespace>PilotoQ1Net.Web</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
