@@ -8,9 +8,10 @@ using PilotoQ1Net.DataAccess;
 namespace PilotoQ1Net.Web.Migrations
 {
     [DbContext(typeof(DomainModelContext))]
-    partial class DomainModelContextModelSnapshot : ModelSnapshot
+    [Migration("20161107012350_adding-status-model")]
+    partial class addingstatusmodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431");

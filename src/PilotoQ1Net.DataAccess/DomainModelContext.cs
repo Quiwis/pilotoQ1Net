@@ -16,6 +16,7 @@ namespace PilotoQ1Net.DataAccess
       public DbSet<Permision> PermisionModel { get; set; }
       public DbSet<Profile> ProfileModel { get; set; }
       public DbSet<User> UserModel { get; set; }
+      public DbSet<Status> StatusModel { get; set; }
       public DbSet<OrganizationalUnit> OrganizationalUnitModel { get; set; }
 
       protected override void OnModelCreating(ModelBuilder builder)
@@ -25,6 +26,7 @@ namespace PilotoQ1Net.DataAccess
             builder.Entity<User>().HasKey(m => m.Id);
             builder.Entity<OrganizationalUnit>().HasKey(m => m.Id);
             builder.Entity<Permision>().HasKey(m => m.Id);
+            builder.Entity<Status>().HasKey(m => m.Id);
             builder.Entity<Profile>().HasKey(m => m.Id);
             // shadow properties
 
@@ -34,6 +36,7 @@ namespace PilotoQ1Net.DataAccess
             builder.Entity<OrganizationalUnit>().Property<DateTime>("Created");
             builder.Entity<Permision>().Property<DateTime>("Created");
             builder.Entity<Profile>().Property<DateTime>("Created");
+            builder.Entity<Status>().Property<DateTime>("Created");
 
             base.OnModelCreating(builder);
       }
