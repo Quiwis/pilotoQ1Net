@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace PilotoQ1Net.Models.Dtos
 {
@@ -10,24 +8,37 @@ namespace PilotoQ1Net.Models.Dtos
     {
         [Required]
         public int Id { get; set; }
-        [Required]
+        
+        [MaxLength(50)]
         public string Tittle { get; set; }
-        [Required]
+        
+        [MaxLength(400)]
+        public string Description { get; set; }
+        
+        [MaxLength(4000)]
         public string Image { get; set; }
+        
         [Required]
         public DateTime StartedDate { get; set; }
+        
         [Required]
         public DateTime ExpiredDate { get; set; }
-        [Required]
+        
+        [MaxLength(50)]
         public string TextAlign { get; set; }
+        
         [Required]
         public bool Global { get; set; }
+        
         [Required]
-        public int UserId { get; set;}
+        public User createBy { get; set; }
+
         [Required]
-        public List<int> SendToId { get; }
+        public Profile Profile { get; set; }
+        
+        public List<User> UserIds { get; set; }
+        
         [Required]
-        public List<int> UnitsId { get; }
-        public DateTime Created { get; set; }
+        public DateTime Updated { get; set; }
     }
 }
